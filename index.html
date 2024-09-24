@@ -15,8 +15,8 @@
 
 </head>
 
-<body>
-    <header class=" bg-orange-50">
+<body class="">
+    <header class=" bg-orange-50 sticky top-0 z-10">
         <div class="py-5 container mx-auto">
             <div class="navbar ">
                 <!-- Nav Button -->
@@ -34,45 +34,44 @@
                 <!-- Balance Section -->
 
                 <div class="navbar-end">
-                    <p class="text-lg"><i class="fa-solid fa-bangladeshi-taka-sign mr-2"></i><span
+                    <p class="text-lg"><i class="fa-solid fa-bangladeshi-taka-sign mr-2"></i><span id="balance"
                             class="mr-2">9827</span>BDT</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto">
+    <main class="container mx-auto mb-auto">
         <!-- Button Section -->
         <section class="flex justify-center gap-5 my-5">
 
-            <button class="btn text-lg">Donation</button>
-            <button class="btn text-lg">History</button>
+            <button id="donation-main-btn" class="btn text-lg bg-green-300 text-white">Donation</button>
+            <button id="history-main-btn" class="btn text-lg">History</button>
 
         </section>
         <!-- Donation Cards -->
 
-        <section class="px-5">
+        <section id="donation-card-section" class="px-5 md:px-0">
             <!-- Card-1  -->
             <div class="card lg:flex-row border p-4 gap-5 mb-10">
                 <!-- Card-1 Image -->
                 <div class="lg:w-1/2 2xl:w-1/3 ">
                     <img class="w-svw lg:h-96 2xl:h-fit" src="/assets/noakhali.png" alt="">
                 </div>
-
                 <!-- Card-1 Content -->
                 <div class="lg:w-1/2 2xl:w-2/3 flex flex-col gap-5">
                     <p class="p-2 bg-slate-100 w-fit text-sm border rounded-md"> <i
-                            class="fa-solid fa-circle-dollar-to-slot mr-2 text-amber-500"></i><span>15600</span> BDT</p>
+                            class="fa-solid fa-circle-dollar-to-slot mr-2 text-amber-500"></i><span id="donated-amount">15600</span> BDT</p>
                     <h2 class="card-title font-bold xl:text-xl">Donate for Flood at Noakhali, Bangladesh</h2>
                     <p class="flex grow xl:text-lg">The recent floods in Noakhali have caused significant damage to
                         homes infrastructure. Your donation will help provide essential supplies and to those affected
                         by this disaster. Every contribution, big or small, makes difference. Please join us in
                         supporting the relief efforts and making a positive impact on the lives of those in need.</p>
 
-                    <div class=" ">
-                        <input class="border rounded-md w-full h-12 pl-5  mb-5" type="number" name="" id=""
+                    <div class="">
+                        <input id="donate-amount" class="border rounded-md w-full h-12 pl-5  mb-5" type="number" name="" id=""
                             placeholder="Write Donation Amount">
-                        <button class="btn w-full text-lg bg-green-300">Donate Now</button>
+                        <button id="donation-btn" class="btn w-full text-lg bg-green-300">Donate Now</button>
                     </div>
                 </div>
                 
@@ -89,7 +88,7 @@
                 <!-- Card-2 Content -->
                 <div class="lg:w-1/2 2xl:w-2/3 flex flex-col gap-5">
                     <p class="p-2 bg-slate-100 w-fit text-sm border rounded-md"> <i
-                            class="fa-solid fa-circle-dollar-to-slot mr-2 text-amber-500"></i><span>15600</span> BDT</p>
+                            class="fa-solid fa-circle-dollar-to-slot mr-2 text-amber-500"></i><span id="feni-donated-amount">586074</span> BDT</p>
                     <h2 class="card-title font-bold xl:text-xl">Donate for Flood Relief in Feni,Bangladesh</h2>
                     <p class="flex grow xl:text-lg">The recent floods in Noakhali have caused significant damage to
                         homes infrastructure. Your donation will help provide essential supplies and to those affected
@@ -97,9 +96,9 @@
                         supporting the relief efforts and making a positive impact on the lives of those in need.</p>
 
                     <div class=" ">
-                        <input class="border rounded-md w-full h-12 pl-5  mb-5" type="number" name="" id=""
+                        <input id="feni-donation-amount" class="border rounded-md w-full h-12 pl-5  mb-5" type="number" name="" id=""
                             placeholder="Write Donation Amount">
-                        <button class="btn w-full text-lg bg-green-300">Donate Now</button>
+                        <button id="feni-donation-btn" class="btn w-full text-lg bg-green-300">Donate Now</button>
                     </div>
                 </div>
                 
@@ -114,7 +113,7 @@
                 <!-- Card-3 Content -->
                 <div class="lg:w-1/2 2xl:w-2/3 flex flex-col gap-5">
                     <p class="p-2 bg-slate-100 w-fit text-sm border rounded-md"> <i
-                            class="fa-solid fa-circle-dollar-to-slot mr-2 text-amber-500"></i><span>15600</span> BDT</p>
+                            class="fa-solid fa-circle-dollar-to-slot mr-2 text-amber-500"></i><span id="quota-donated-amount">684466</span> BDT</p>
                     <h2 class="card-title font-bold xl:text-xl">Aid for Injured in the Quota Movement</h2>
                     <p class="flex grow xl:text-lg">The recent floods in Noakhali have caused significant damage to
                         homes infrastructure. Your donation will help provide essential supplies and to those affected
@@ -122,18 +121,28 @@
                         supporting the relief efforts and making a positive impact on the lives of those in need.</p>
 
                     <div class=" ">
-                        <input class="border rounded-md w-full h-12 pl-5  mb-5" type="number" name="" id=""
+                        <input class="border rounded-md w-full h-12 pl-5  mb-5" type="number" name="" id="quota-donation-amount"
                             placeholder="Write Donation Amount">
-                        <button class="btn w-full text-lg bg-green-300">Donate Now</button>
+                        <button id="quota-donation-btn" class="btn w-full text-lg bg-green-300">Donate Now</button>
                     </div>
                 </div>
                 
             </div>
-           
+            
+            
         </section>
-    </main>
-    <footer></footer>
+        
+        <!-- History Section -->
+         <div id="history-list" class="rounded-lg gap-5 container hidden">
 
+         </div>
+         
+        <script src="/js/index.js"></script>
+    </main>
+    <footer id="footer" class="p-10 bg-orange-50 flex align-bottom">
+
+    </footer>
+    
 </body>
 
 </html>
