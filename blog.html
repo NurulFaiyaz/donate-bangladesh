@@ -42,8 +42,9 @@
             </div>
         </div>
     </header>
-    <main class="container mx-auto px-5 sm:px-0">
-        <h1 class="text-2xl md:text-4xl font-bold my-10">Important FAQ <i class="fa-regular fa-circle-question"></i></h1>
+    <main class="container mx-auto px-5 sm:px-0 mb-10">
+        <h1 class="text-2xl md:text-4xl font-bold my-10">Important FAQ <i class="fa-regular fa-circle-question"></i>
+        </h1>
 
         <!-- FAQ Section -->
 
@@ -52,14 +53,17 @@
                 <input type="radio" name="my-accordion-4" checked="checked" />
                 <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
                 <div class="collapse-content">
-                    <p class="text-lg">hello</p>
+                    <p class="text-lg">The Document Object Model (DOM) is a programming interface for web documents. It
+                        represents the structure of HTML as a tree of objects, allowing
+                        programs to manipulate the document's structure, style, and content.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow join-item border-base-300 border">
                 <input type="radio" name="my-accordion-4" />
-                <div class="collapse-title text-xl font-medium">How do yiu select an element from the DOM?</div>
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
-                    <p class="text-lg">hello</p>
+                    <p class="text-lg">In Javascript I know some way to select element from dom. Like I mostly use
+                        getElementById, getElementByClass etc.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow join-item border-base-300 border">
@@ -67,7 +71,12 @@
                 <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and
                     why is it useful?</div>
                 <div class="collapse-content">
-                    <p class="text-lg">hello</p>
+                    <p class="text-lg">Event delegation is a technique in JavaScript that leverages event propagation
+                        (bubbling) to handle events at a higher level in the DOM tree than the element on which the
+                        event originated. <br>
+                        Event delegation is particularly useful in scenarios where you have many similar elements that
+                        need the same event handling logic, or when elements are added dynamically to the DOM.
+                    </p>
                 </div>
             </div>
             <div class="collapse collapse-arrow join-item border-base-300 border">
@@ -75,20 +84,20 @@
                 <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and style
                     using the DOM?</div>
                 <div class="collapse-content">
-                    <p class="text-lg">hello</p>
+                    <p class="text-lg">To manipulate an element's attributes and style using the DOM, I can Retrieve or change an element's attributes, like its ID or class. Directly modify the element's appearance, such as its color or background. Add, remove, or toggle CSS classes to dynamically change the element's styling.</p>
                 </div>
             </div>
         </div>
-     
+
     </main>
     <footer id="footer" class="p-10 bg-orange-50 flex align-bottom">
     </footer>
     <script>
-        document.getElementById("home-btn").addEventListener("click", function(){
+        document.getElementById("home-btn").addEventListener("click", function () {
             window.location.href = "index.html"
         })
 
-        document.getElementById("donate-bangladesh").addEventListener("click", function(){
+        document.getElementById("donate-bangladesh").addEventListener("click", function () {
             window.location.href = "index.html"
         })
 
