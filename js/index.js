@@ -16,13 +16,17 @@ donationButton.addEventListener('click', function(){
     const donationAmount = getValueById("donate-amount")
     const donatedAmount = getInnerTextById("donated-amount")
 
-    if(donationAmount <=0 || donationAmount === "" || isNaN(donationAmount)){
+    if(donationAmount <= 0 || donationAmount == "" || isNaN(donationAmount)){
         alert("Invalid Input!")
+        document.getElementById("my_modal_1").close()
         return
     }
     if( accountBalance < donationAmount ){
-        alert("Insufficient balance.")    
+        alert("Insufficient balance.")
+        document.getElementById("my_modal_1").close()
+        return
     }
+    
 
     const currentDonatedBalance = donationAmount + donatedAmount;
     const currentAccountBalance = accountBalance - donationAmount
@@ -42,12 +46,14 @@ donationButton.addEventListener('click', function(){
 
     historyList.innerHTML=`
     <p class="text-xl font-bold text-gray-600">${donationAmount} Taka is Donated for Flood at Noakhali, Bangladesh</p>
-    <p class="text-lg font-bold text-gray-600">Date: ${new Date().toLocaleDateString()}</p>
+    <p class="text-lg font-bold text-gray-600">Date: ${new Date()}</p>
     `;
 
     const historyContainer = document.getElementById("history-list");
 
     historyContainer.insertBefore(historyList, historyContainer.firstChild);
+
+    document.getElementById("donate-amount").value = "";
 
     
 });
@@ -64,10 +70,12 @@ feniDonationButton.addEventListener('click', function(){
 
     if(donationAmount <=0|| donationAmount == "" || isNaN(donationAmount)){
         alert("Invalid Input!")
+        document.getElementById("my_modal_2").close()
         return
     }
     if( accountBalance < donationAmount ){
         alert("Insufficient balance.")
+        document.getElementById("my_modal_2").close()
         return
     }
 
@@ -89,12 +97,14 @@ feniDonationButton.addEventListener('click', function(){
 
     historyList.innerHTML=`
     <p class="text-xl font-bold text-gray-600">${donationAmount} Taka is Donated for Flood at Feni, Bangladesh</p>
-    <p class="text-lg font-bold text-gray-600">Date: ${new Date().toLocaleDateString()}</p>
+    <p class="text-lg font-bold text-gray-600">Date: ${new Date()}</p>
     `;
 
     const historyContainer = document.getElementById("history-list");
 
     historyContainer.insertBefore(historyList, historyContainer.firstChild);
+    document.getElementById("feni-donation-amount").value = "";
+    
 
      
 });
@@ -111,10 +121,12 @@ quotaDonationButton.addEventListener('click', function(){
 
     if(donationAmount <=0|| donationAmount == "" || isNaN(donationAmount)){
         alert("Invalid Input!")
+        document.getElementById("my_modal_3").close()
         return
     }
     if( accountBalance < donationAmount ){
         alert("Insufficient balance.")
+        document.getElementById("my_modal_3").close()
         return
     }
 
@@ -136,13 +148,13 @@ quotaDonationButton.addEventListener('click', function(){
 
     historyList.innerHTML=`
     <p class="text-xl font-bold text-gray-600">${donationAmount} Taka is Donated for Quota Movement, Bangladesh</p>
-    <p class="text-lg font-bold text-gray-600">Date: ${new Date().toLocaleDateString()}</p>
+    <p class="text-lg font-bold text-gray-600">Date: ${new Date()}</p>
     `;
 
     const historyContainer = document.getElementById("history-list");
 
     historyContainer.insertBefore(historyList, historyContainer.firstChild);
-
+    document.getElementById("quota-donation-amount").value = "";
      
 });
 
