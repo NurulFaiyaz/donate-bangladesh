@@ -16,12 +16,12 @@ donationButton.addEventListener('click', function(){
     const donationAmount = getValueById("donate-amount")
     const donatedAmount = getInnerTextById("donated-amount")
 
-    if(donationAmount <=0 || donationAmount == "" || isNaN(donationAmount)){
+    if(donationAmount <=0 || donationAmount === "" || isNaN(donationAmount)){
         alert("Invalid Input!")
-        return;
+        return
     }
     if( accountBalance < donationAmount ){
-        alert("Insufficient balance.")
+        alert("Insufficient balance.")    
     }
 
     const currentDonatedBalance = donationAmount + donatedAmount;
@@ -68,6 +68,7 @@ feniDonationButton.addEventListener('click', function(){
     }
     if( accountBalance < donationAmount ){
         alert("Insufficient balance.")
+        return
     }
 
     const currentDonatedBalance = donationAmount + donatedAmount;
@@ -196,4 +197,10 @@ donationMainBtn.addEventListener('click', function(){
     document.getElementById("donation-card-section").classList.remove("hidden")
     document.getElementById("history-list").classList.add("hidden")
 
+})
+
+
+document.getElementById("blog-btn").addEventListener('click', function(){
+    window.location.href = "blog.html"
+    return
 })
